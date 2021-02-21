@@ -13,5 +13,11 @@ const webpackBasicDefination = {
     "ContentBase Just directs the entryPoint where should the server look for files instead of just showing directory if there are no contentbase providede it will load the directory instead of Page in Browser",
 };
 
+const webpackSpreadSyntax = {
+    ...webpackBasicDefination, //The spread syntax 
+    SpreadSyntax: "When we use spread Syntax the Webpack is just injecting that but not building in to dist/main folder and that's where the BabelSupport jumps in",
+    
+}
+
 console.log(webpackBasic);
 console.log(webpackBasicDefination.hotReload);
