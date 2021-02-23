@@ -1,4 +1,5 @@
 let mode = "development";
+const MiniCssExtractPlugin = require("@vusion/mini-css-extract-plugin");
 
 if (process.env.NODE_ENV === "production") {
   mode = "production";
@@ -6,9 +7,17 @@ if (process.env.NODE_ENV === "production") {
 
 module.exports = {
   mode: mode,
-
   module: {
     rules: [
+      {
+        test: /\.s?css$/i,
+        use: [
+          MiniCssExtractPlugin.loader,
+          "css-loader",
+          "postcss-loader",
+          "sass-loader",
+        ],
+      },
       {
         test: /\.js$/,
         exclude: /node_modules/,
@@ -18,8 +27,13 @@ module.exports = {
       },
     ],
   },
+
+  plugins: [new MiniCssExtractPlugin()],
+
   devtool: "source-map",
+
   devServer: {
     contentBase: "./dist", //Relative path for where the project is
+    hot: true,
   },
 };
