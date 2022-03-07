@@ -22,6 +22,6 @@
     "postcss-preset-env": "^6.7.0",
     "postcss-variables-loader": "^6.0.0",
     "sass": "^1.32.8",
-    "sass-loader": "^11.0.1"
+    "sass-loader": "12.6.0"
   }
 }
