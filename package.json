@@ -18,7 +18,7 @@
     "@vusion/mini-css-extract-plugin": "^0.8.5",
     "css-loader": "3.2.0",
     "postcss": "^8.2.6",
-    "postcss-loader": "^5.0.0",
+    "postcss-loader": "^7.0.0",
     "postcss-preset-env": "^6.7.0",
     "postcss-variables-loader": "^6.0.0",
     "sass": "^1.32.8",
